@@ -1,0 +1,14 @@
+if [ "$#" != 2 ]; then echo usage: "$0 <sleeptime> <loops>"; exit; fi
+
+sleeptime=$1
+loops=$2
+for ((i=1; i<=$loops; i++)); do
+       	echo "$i curl"
+	time curl http://23.119.164.150:2000/index.html
+	#time echo "Hello"
+	echo "done curl"
+	if (( $i < $loops )); then
+		echo "sleeping $sleeptime"
+		sleep $sleeptime
+	fi
+done

@@ -1,0 +1,5 @@
+subject: port forwarding and seeing retransmissions
+
+The retrinsmissions are causeing access to the internal server to be very slow. I have a BGW210-700 in firewall -> NAT/Gaming I setup "custom service" with "Service Name" = "Test8080", "Global Port Range" = 2000, "Base Host Port" = 8080 and "Protocol" = TCP/UDP. I then added a "Application Hosting Entry" from "*Test8080" to "wink-desktop".
+
+I then started a http.service in a directory with index.html contents of just the word "Hello".
